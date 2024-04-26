@@ -1,0 +1,239 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style-type: none;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: rgb(222, 209, 202);
+}
+
+:root{
+
+    --border-r-val : 20px;
+    --box-shadow : rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    --btn-background : rgb(163, 121, 118);
+    --white : white;
+}
+.headingContainer{
+    background-color:var(--btn-background);
+    color: var(--white); 
+    padding: 25px 30px;
+    text-transform: capitalize;
+    font-size: 18px;
+    box-shadow: var(--box-shadow);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 99;
+}
+
+
+.newtask{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 200px;
+    background-color:var(--btn-background);
+    color: var(--white);   
+    padding: 40px;
+    border-top-left-radius: var(--border-r-val);
+    border-bottom-right-radius: var(--border-r-val);
+    border-bottom-left-radius:var(--border-r-val);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    text-transform: capitalize;
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+}
+
+.taskContainWaper{
+    /* background-color: rgba(255, 192, 203, 0.209); */
+    margin-top: 100px;
+    padding: 10px;
+}
+
+.wrap{
+    /* background-color: crimson; */
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+
+}
+.task{
+    background: rgb(112, 68, 71);
+    color: white;
+    padding: 30px 50px;
+    border-radius: 20px;
+    box-shadow: var(--box-shadow);
+
+}
+.t_heading{
+    font-size: 30px;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+.task_des{
+    font-size:40px;
+    text-transform: capitalize;
+    font-weight: 600;
+    margin-top: 30px;
+}
+.t_date{
+    font-weight: bold;
+    color: rgb(217, 217, 217);
+}
+
+.deletetask{
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.del{
+    background-color:var(--btn-background);
+    color: var(--white); 
+    border: 1px solid rgba(255, 255, 255, 0.655);
+    padding:35px;
+    font-size: 25px;
+    text-transform: uppercase;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+.taskInputContainershow{
+    background-color: rgba(9, 9, 9, 0.498);
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    z-index: 999;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* display: none; */
+}
+.taskInputContainerhide{
+    background-color: rgba(9, 9, 9, 0.498);
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    z-index: 999;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    visibility: none;
+}
+
+
+.inputContainer{
+    background-color: rgb(222, 209, 202);
+    padding: 50px;
+   
+    border-radius: 30px;
+    box-shadow: var(--box-shadow);
+}
+
+.edit{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    margin-top: 20px;
+}
+
+.close{
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: capitalize;
+    text-align: right;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+    padding: 10px;
+    transition: 0.4s;
+}
+
+.close:hover{
+    color: crimson;
+}
+
+.getinput{
+    font-size: 40px;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 10px 30px ;
+    
+}
+
+.addtask{
+    font-size: 30px;
+    padding: 20px 40px;
+    border-radius: 10px;
+    border: none;
+    background-color:var(--btn-background);
+    color: var(--white); 
+    transition: 0.4s;
+}
+.addtask:hover{
+    background-color: black;
+}
+
+@media screen and (max-width:1100px) {
+    
+.inputContainer{
+    background-color: var(--pink-background);
+    padding: 20px;
+   
+    border-radius: 30px;
+    box-shadow: var(--box-shadow);
+}
+
+.edit{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 20px;
+}
+
+
+.addtask{
+    font-size: 30px;
+    padding: 15px 40px;
+    border: none;
+    background-color: crimson;
+    color: white;
+    transition: 0.4s;
+}
+
+
+.getinput{
+    font-size: 40px;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 10px 8px ;
+    
+}
+
+}
